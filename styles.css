@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+body {
+  background: #0b0027;
+  color: rgb(2, 110, 2);
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: normal;
+  font-size:25px;
+}
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+  animation: ellipsis steps(4, end) 900ms 5;
+  content: "\2026";
+  font-family: "Anonymous Pro", monospace;
+  font-weight: 700;
+  font-style: normal;
+  /* ascii code for the ellipsis character */
+  width: 0px;
+  font-size:25px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 40px;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 40px;
+  }
+}
+#loader {
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-top: 5px solid rgb(2, 110, 2);
+    /* border-bottom: 5px solid rgb(2, 110, 2); */
+    width: 25px;
+    height: 25px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+    margin-top: 60px;
+  }
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  /* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+.d-none{
+    display:none;
+}
+#success-message{
+  position:absolute !important;
+  top:0;
+  height:100vh;
+  background:#000000;
+  color:#00ff00;
+  width:100vw;
+}
