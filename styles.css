@@ -60,6 +60,7 @@ body {
 #success-message{
   position:absolute !important;
   top:0;
+  left:0;
   height:100vh;
   background:#000000;
   color:#00ff00;
